@@ -9,10 +9,10 @@ const fadeUp  = {
 };
 
 const items = [
-  { icon: "★",    value: "5,0",   label: "Note Google",     valueClass: "text-orange" },
-  { icon: "🏗️",  value: "10+",   label: "Ans d'expérience", valueClass: "text-orange" },
-  { icon: "✓",    value: "APCHQ", label: "Membre certifié",  valueClass: "text-orange text-[22px]" },
-  { icon: "🔖",   value: "RBQ",   label: "Licence 56366909", valueClass: "text-orange text-[20px]" },
+  { value: "5,0",   sub: "★★★★★", label: "Note Google" },
+  { value: "10+",   sub: "ANS",    label: "d'expérience" },
+  { value: "APCHQ", sub: "CERTIFIÉ", label: "Membre certifié" },
+  { value: "RBQ",   sub: "LICENCE", label: "56366909" },
 ];
 
 export default function Confiance() {
@@ -30,14 +30,16 @@ export default function Confiance() {
             <motion.div
               key={item.label}
               variants={fadeUp}
-              className="bg-white rounded-card p-7 text-center shadow-sm"
+              className="bg-white rounded-card p-7 text-center"
               style={{ boxShadow: "0 2px 14px rgba(0,0,0,.06)" }}
             >
-              <div className="text-[28px] mb-1.5">{item.icon}</div>
-              <div className={`font-oswald font-bold text-[34px] leading-none ${item.valueClass}`}>
+              <div className="font-oswald font-bold leading-none mb-1" style={{ fontSize: 32, color: "#E87722" }}>
                 {item.value}
               </div>
-              <div className="font-inter text-[13px] font-medium mt-1.5" style={{ color: "#2B2B2B" }}>
+              <div className="font-inter mb-1" style={{ fontSize: 11, color: "#E87722", letterSpacing: 2, textTransform: "uppercase" }}>
+                {item.sub}
+              </div>
+              <div className="font-inter font-medium" style={{ fontSize: 13, color: "#2B2B2B" }}>
                 {item.label}
               </div>
             </motion.div>
