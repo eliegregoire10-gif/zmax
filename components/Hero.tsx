@@ -1,3 +1,4 @@
+
 "use client";
 
 import Image from "next/image";
@@ -19,12 +20,10 @@ export default function Hero() {
       className="relative min-h-screen flex flex-col justify-end overflow-hidden"
       style={{ background: "linear-gradient(135deg,#111 0%,#1E1E1E 60%,#1A1A1A 100%)" }}
     >
-      {/* Radial glow */}
       <div
         className="pointer-events-none absolute inset-0"
         style={{ background: "radial-gradient(ellipse 70% 60% at 75% 50%, rgba(232,119,34,.07) 0%, transparent 70%)" }}
       />
-      {/* Oblique accent — desktop */}
       <div
         className="pointer-events-none absolute top-0 bottom-0 right-0 hidden md:block"
         style={{
@@ -36,7 +35,6 @@ export default function Hero() {
 
       <div className="relative z-10 mx-auto w-full max-w-[1280px] px-6 pb-14 pt-36 md:pt-40">
 
-        {/* Logo */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -46,7 +44,6 @@ export default function Hero() {
           <Image src="/logo.png" alt="Construction Z. Max" width={220} height={72} className="h-16 w-auto" priority />
         </motion.div>
 
-        {/* H1 */}
         <motion.h1
           custom={0.2}
           variants={fadeUp}
@@ -60,7 +57,6 @@ export default function Hero() {
           <br />DE CONFIANCE
         </motion.h1>
 
-        {/* Sub */}
         <motion.p
           custom={0.35}
           variants={fadeUp}
@@ -72,7 +68,6 @@ export default function Hero() {
           Membre APCHQ · Licence RBQ&nbsp;: 56366909 · Trois-Rivières, QC
         </motion.p>
 
-        {/* CTAs */}
         <motion.div
           custom={0.5}
           variants={fadeUp}
@@ -80,15 +75,14 @@ export default function Hero() {
           animate="visible"
           className="flex flex-wrap gap-3.5 mb-11"
         >
-          <Link href="tel:+18191234567" className="btn-primary text-[15px] px-8 py-4">
-            📞 APPELER MAINTENANT
+          <Link href="tel:+18197018540" className="btn-primary text-[15px] px-8 py-4">
+            APPELER MAINTENANT
           </Link>
           <Link href="#soumission" className="btn-secondary text-[15px] px-8 py-4">
-            📋 DEMANDER UNE SOUMISSION
+            DEMANDER UNE SOUMISSION
           </Link>
         </motion.div>
 
-        {/* Stars */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -101,7 +95,6 @@ export default function Hero() {
         </motion.div>
       </div>
 
-      {/* Bottom stripe */}
       <div className="stripe relative z-10" />
     </section>
   );
