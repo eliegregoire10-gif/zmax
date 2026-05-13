@@ -50,7 +50,6 @@ export default function Navbar() {
           />
         </Link>
 
-        {/* Desktop links */}
         <ul className="hidden md:flex items-center gap-7">
           {links.map((l) => (
             <li key={l.href}>
@@ -64,15 +63,13 @@ export default function Navbar() {
           ))}
         </ul>
 
-        {/* Desktop CTA */}
         <Link
           href="tel:+18197018540"
           className="hidden md:inline-flex items-center gap-2 btn-primary text-xs px-4 py-2.5"
         >
-          📞 APPELER
+          APPELER
         </Link>
 
-        {/* Hamburger */}
         <button
           className="md:hidden p-1.5 text-text"
           onClick={openMenu}
@@ -86,7 +83,6 @@ export default function Navbar() {
         </button>
       </nav>
 
-      {/* Mobile overlay */}
       {menuOpen && (
         <div
           className="fixed inset-0 z-[999] flex flex-col items-center justify-center gap-9 bg-night/98"
@@ -115,7 +111,7 @@ export default function Navbar() {
             onClick={closeMenu}
             className="btn-primary mt-2 text-base px-8 py-4"
           >
-            📞 APPELER
+            APPELER
           </Link>
         </div>
       )}
