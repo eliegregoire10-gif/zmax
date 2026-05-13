@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 
@@ -13,6 +15,11 @@ const services = [
 export default function Footer() {
   return (
     <footer style={{ background: "#0F0F0F" }}>
+      <style>{`
+        .footer-link { color: #555; text-decoration: none; transition: color 0.2s; }
+        .footer-link:hover { color: #E87722; }
+      `}</style>
+
       <div className="mx-auto max-w-[1280px] px-6 pt-16 pb-12">
         <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr_1.5fr] gap-12">
 
@@ -47,13 +54,7 @@ export default function Footer() {
             <ul className="flex flex-col gap-2.5">
               {services.map((s) => (
                 <li key={s}>
-                  <Link
-                    href="#services"
-                    className="font-inter text-[14px] transition-colors"
-                    style={{ color: "#555" }}
-                    onMouseOver={(e) => (e.currentTarget.style.color = "#E87722")}
-                    onMouseOut={(e)  => (e.currentTarget.style.color = "#555")}
-                  >
+                  <Link href="#services" className="footer-link font-inter text-[14px]">
                     {s}
                   </Link>
                 </li>
@@ -80,13 +81,7 @@ export default function Footer() {
               </div>
               <div>
                 <p className="font-inter text-[10px] text-orange tracking-[2px] uppercase mb-1">Courriel</p>
-                <a
-                  href="mailto:constructionzmax@gmail.com"
-                  className="font-inter text-[14px] transition-colors"
-                  style={{ color: "#555" }}
-                  onMouseOver={(e) => (e.currentTarget.style.color = "#E87722")}
-                  onMouseOut={(e)  => (e.currentTarget.style.color = "#555")}
-                >
+                <a href="mailto:constructionzmax@gmail.com" className="footer-link font-inter text-[14px]">
                   constructionzmax@gmail.com
                 </a>
               </div>
@@ -113,3 +108,4 @@ export default function Footer() {
     </footer>
   );
 }
+
